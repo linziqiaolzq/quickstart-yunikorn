@@ -1,0 +1,1 @@
+{"SlbServiceName":"yunikorn-loaderbalancer","ChartValues":{},"HelmChartPath":"helm","ServicePorts":["9889"],"ServiceType":"private","AllowedRegions":["cn-hangzhou","cn-shanghai","cn-beijing"],"ArtifactSourceType":"HelmChart","RepoName":"linziqiaolzq/quickstart-yunikorn","RegionId":"cn-hangzhou","CustomParameters":"","OutputType":"ServiceLoadBalancer"}
