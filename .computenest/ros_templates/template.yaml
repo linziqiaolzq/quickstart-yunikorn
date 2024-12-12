@@ -413,7 +413,7 @@ Resources:
                   - ClusterId
       HelmChartUrl: '{{ computenest::helmchart::linziqiaolzq_quickstart-yunikorn }}'
       ChartValues:
-        Fn::Sub: '{"serviceA": {"name": "quickstrat-yunikorn", "selector": {"component": "yunikorn-scheduler"}, "type": "LoadBalancer", "ports": [{"port": 9889, "targetPort": 9889}]}}'
+        Fn::Sub: '{"service": {"selector": {"component": "yunikorn-scheduler"}, "type": "LoadBalancer", "ports": [{"port": 9889, "targetPort": 9889}]}}'
       DockerConfigJson: '{{ computenest::helm::dockerconfigjson }}'
       Namespace:
         Ref: 'ALIYUN::StackName'
