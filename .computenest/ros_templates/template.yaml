@@ -420,7 +420,7 @@ Resources:
       ReleaseName: yunikorn
       WaitUntil:
         - Kind: Service
-          Name: quickstart-yunikorn
+          Name: yunikorn-service
           JsonPath: $.status.loadBalancer.ingress[0].ip
           Operator: NotEmpty
           Timeout: 300
