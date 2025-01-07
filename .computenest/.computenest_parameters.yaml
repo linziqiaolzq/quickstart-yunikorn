@@ -1,0 +1,22 @@
+ChartValues:
+  service:
+    selector:
+      component: yunikorn-scheduler
+    type: LoadBalancer
+    ports:
+    - port: 9889
+      targetPort: 9889
+HelmChartPath: helm
+RuntimeType: Kubernetes
+OutputCmd: |-
+  export SERVICE_IP=$(kubectl get svc --namespace ${Namespace} yunikorn-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
+  echo "http://$SERVICE_IP:9889"
+ServiceType: private
+ArtifactSourceType: HelmChart
+ServiceBuildRegion: ap-southeast-1
+RepoName: linziqiaolzq/quickstart-yunikorn
+RegionId: cn-hangzhou
+OutputType: OutputCommand
+Owner: linziqiaolzq
+Branch: main
+Platform: github
